@@ -76,13 +76,19 @@
             display: block;
             margin: 30px auto auto auto;
         }
+        #comments{
+            color: black;
+        }
     </style>
     <script>
         function hey() {
             alert('지금은 리뷰할 수 없어요(>m<);;');
         }
     </script>
-
+    <script
+            src='http://127.0.0.1/wp-content/plugins/remove-disqus-ads/assets/js/frontend.js?ver=1.0.0'
+            id='remove_disqus_ads-frontend-js'>
+    </script>
 </head>
 
 <body>
@@ -107,7 +113,7 @@
                     <input type="text" class="form-control" id="exampleFormControlInput1"
                            placeholder="ex)넷플릭스 / 완결 / 여운">
                 </div>
-                <button onclick="hey()" type="submit" class="btn btn-danger btn-done">Review with me</button>
+                <button onclick="hey()" type="submit" class="btn btn-danger btn-done">리뷰 작성하기</button>
             </div>
         </div>
 
@@ -135,7 +141,9 @@
                     <a href="https://www.netflix.com/title/81137134" target="_blank">
                         <h5 class="card-title">누나의 첫사랑</h5>
                     </a>
-                    <p class="card-text">업무는 만렙, 연애는 쪼렙인 32세 능력녀 허판싱. 아침부터 근무 태만인 인턴 때문에 제대로 난처해진 그녀가 거래처에서 썸남과 마주친다. 이 만남, 아름다울 수 있을까?</p>
+                    <p class="card-text">
+                        잘나가던 그녀에게 인생 최대 과제가 닥쳤다. 동시에 두 개의 사랑이 찾아온 것! 그녀를 쟁취하기 위해 불꽃 튀는 경쟁을 시작하는 두 남자. 그런데 삼각관계도 모자라 운영하는 회사에도 커다란 변화가 찾아왔다. 어떡하지, 내 인생?
+                    </p>
                     <p class="card-text tags">넷플릭스 / 완결 / 유쾌발랄 / 과몰입 / 로맨스</p>
                 </div>
             </div>
@@ -161,7 +169,7 @@
                         <h5 class="card-title">보건교사 안은영</h5>
                     </a>
                     <p class="card-text">
-                        아, 귀찮은데? 지하실에서 흘러나오고 있는 젤리 때문에 학생이 아픈 것 같다. 무기를 챙겨 든 은영이 그곳으로 향한다. 그리고 인표에게 들켜버린다. 괴상망측한 모습을.
+                        언뜻 보면 모두가 행복한 고등학교다. 그녀의 눈에만 보이는 찐득한 젤리와 악귀만 없다면. 학생들을 지키기 위해 플라스틱 칼을 든 보건교사 안은영. 오늘도 해치워 버려!
                     </p>
                     <p class="card-text tags">넷플릭스 / 완결 / 유쾌발랄 / 판타지 / 로맨스</p>
                 </div>
@@ -175,15 +183,41 @@
                         <h5 class="card-title">ONE DAY AT A TIME</h5>
                     </a>
                     <p class="card-text">
-                        드디어 15번째 생일을 맞는 페넬로페의 딸 엘레나. 쿠바 전통 성년식 킨세녜라를 해주고 싶은 엄마의 뜻을 페미니스트 딸에게 전하는 일이 쉽지는 않다.
+                        고등학생 딸과 초등학생 아들을 친정 엄마의 도움 아닌 도움으로 키워가는 쿠바계 열혈 싱글맘. 그녀의 하루하루를 담았다. 1975년부터 1984년까지 인기리에 방영된 시트콤의 리메이크 작.
                     </p>
                     <p class="card-text tags">넷플릭스 / 미완 / 유쾌발랄 / 가족 / 감동</p>
                 </div>
             </div>
+            <div class="card" id="comments">
+                <div class="card-body">
+                    <a href="" target="_blank">
+                        <h5 class="card-title" id="comments">그냥 넣어본 댓글기능</h5>
+                    </a>
+                    <!-- 댓글 설치 코드 -->
+                    <div id="disqus_thread"></div>
+                    <script>
+                        /**
+                         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                        /*
+                        var disqus_config = function () {
+                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        */
+                        (function () { // DON'T EDIT BELOW THIS LINE
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://hello-review-world.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+                        powered by Disqus.</a></noscript>
+                    <!-- 댓글 코드 끝 -->
+                </div>
+            </div>
             <div class="card">
-                <img class="card-img-top"
-                     src="https://lh3.googleusercontent.com/proxy/nbfoRLswNuuEFe61fM436kKPVoDh5MP8MAM-iOLtSc5rEzRfa-GP9ew9R5BiivK7SSm8gdCg7y8u_XbcWGClig"
-                     alt="Card image cap">
                 <div class="card-body">
                     <a href="" target="_blank">
                         <h5 class="card-title">다음 작품은?</h5>
@@ -191,27 +225,7 @@
                     <p class="card-text">
                         봐야지 생각만 하고 아직 안 본 작품들이 당신을 기다리고 있습니다!
                     </p>
-                    <p class="card-text tags">감상태그</p>
-                    <!-- 라이브리 시티 설치 코드 -->
-                    <div id="lv-container" data-id="city" data-uid="MTAyMC81NDkzNC8zMTQwMw==">
-                        <script type="text/javascript">
-                            (function (d, s) {
-                                var j, e = d.getElementsByTagName(s)[0];
-
-                                if (typeof LivereTower === 'function') {
-                                    return;
-                                }
-
-                                j = d.createElement(s);
-                                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                                j.async = true;
-
-                                e.parentNode.insertBefore(j, e);
-                            })(document, 'script');
-                        </script>
-                        <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
-                    </div>
-                    <!-- 시티 설치 코드 끝 -->
+                    <p class="card-text tags">나중에 / 봐야지 / 언제봐?</p>
                 </div>
             </div>
         </div>
