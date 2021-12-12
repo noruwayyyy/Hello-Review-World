@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+
+    <title>Hello, Review World!</title>
+
+    <style>
+        *{
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+        .wrap{
+            width: 900px;
+            margin: auto;
+        }
+        .card-title{
+            color: darkblue;
+            font-weight: bold;
+        }
+        .card-text{
+            color: dimgrey;
+            font-size: 15px;
+        }
+        .tags{
+            color: darkslateblue;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .form-all{
+            width: 600px;
+            margin: 50px auto 60px auto;
+            border: 3px solid dimgrey;
+            border-radius: 30px;
+            padding: 30px;
+        }
+        .btn-done{
+            width: 100px;
+            display: block;
+            margin: 30px auto auto auto;
+        }
+    </style>
+    <script>
+        function hey() {
+            alert('지금은 리뷰할 수 없어요!');
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="jumbotron">
+            <h1 class="display-4">Hello, Review World!</h1>
+            <p class="lead">드라마, 영화 등 다양한 영상 컨텐츠에 대한 리뷰를 기록하고, 나중에 볼 수 있는 공간입니다</p>
+            <hr class="my-4">
+            <p class="lead">
+                <a onclick="hey()" class="btn btn-primary btn-lg" href="#" role="button">Review with me</a>
+            </p>
+        </div>
+
+        <div class="form-all">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">작품url</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="작품을 감상할 수 있는 url을 입력해주세요">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">작품 줄거리</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="작품의 간단한 줄거리를 입력해주세요" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">감상태그</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="ex)넷플릭스 / 완결 / 여운">
+            </div>
+            <button onclick="hey()" type="submit" class="btn btn-primary btn-done">작성완료</button>
+        </div>
+
+        <div class="card-columns">
+            <div class="card">
+                <img class="card-img-top"
+                     src="https://d3mcojo3jv0dbr.cloudfront.net/2020/11/09/13/58/9378beb549f3a5a3aa4c27c762171b76.jpeg?w=600&h=300&q=65"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <a href="https://www.netflix.com/title/80993655" target="_blank">
+                        <h5 class="card-title">먼 훗날 우리</h5>
+                    </a>
+                    <p class="card-text">
+                        고향 가는 기차에서 만난 두 청춘. 낯선 도시 베이징으로 돌아와 서로에게 의지한다. 10년 뒤, 다시 찾아온 우연. 그리운 사랑이 부르면, 이번엔 함께 뒤돌아볼까.
+                    </p>
+                    <p class="card-text tags">넷플릭스 / 완결 / 속상 / 여운 / 로맨스</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                     src="https://post-phinf.pstatic.net/MjAyMDAyMTRfMjA0/MDAxNTgxNjUwNjA3MjY2.hH06qu_Lea6cSCJfRHafsKn3dhStU2Oukxk_K3CZZPcg.9y826OiQsPuF9BvWGXfzLgMzoPM8jOSsNSH1xp8cM5Ag.JPEG/1580539215099.jpg?type=w1200"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <a href="https://www.netflix.com/title/81137134" target="_blank">
+                        <h5 class="card-title">누나의 첫사랑</h5>
+                    </a>
+                    <p class="card-text">업무는 만렙, 연애는 쪼렙인 32세 능력녀 허판싱. 아침부터 근무 태만인 인턴 때문에 제대로 난처해진 그녀가 거래처에서 썸남과 마주친다. 이 만남, 아름다울 수 있을까?</p>
+                    <p class="card-text tags">넷플릭스 / 완결 / 유쾌발랄 / 과몰입 / 로맨스</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                     src="https://newsimg.hankookilbo.com/cms/articlerelease/2021/09/17/15034b72-edee-4e6f-92a3-8f4bbca59445.jpg"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <a href="https://www.netflix.com/title/81342555" target="_blank">
+                        <h5 class="card-title">상견니</h5></a>
+                    <p class="card-text">
+                        2년 전, 사랑하는 연인을 잃었다. 그리고 오늘, 17세 소녀로 깨어나 17세인 그를 다시 만났다. 다른 시공간에서 다른 이름으로 나타난 너. 꼭 한 번 보고 싶다는 소원이 이렇게라도 이뤄진걸까.
+                    </p>
+                    <p class="card-text tags">넷플릭스 / 웨이브 / 완결 / 속상 / 여운 / 과몰입 / 로맨스</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                     src="http://image.kmib.co.kr/online_image/2020/0928/611818110015054375_2.jpg"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <a href="https://www.netflix.com/title/80209129" target="_blank">
+                        <h5 class="card-title">보건교사 안은영</h5>
+                    </a>
+                    <p class="card-text">
+                        아, 귀찮은데? 지하실에서 흘러나오고 있는 젤리 때문에 학생이 아픈 것 같다. 무기를 챙겨 든 은영이 그곳으로 향한다. 그리고 인표에게 들켜버린다. 괴상망측한 모습을.
+                    </p>
+                    <p class="card-text tags">넷플릭스 / 완결 / 유쾌발랄 / 판타지 / 로맨스</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                     src="https://blog.kakaocdn.net/dn/bvYI05/btqJizEUIsR/TeqmRKvcW19UfrhTWkfq8K/img.jpg"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <a href="https://www.netflix.com/title/80095532" target="_blank">
+                        <h5 class="card-title">ONE DAY AT A TIME</h5>
+                    </a>
+                    <p class="card-text">
+                        드디어 15번째 생일을 맞는 페넬로페의 딸 엘레나. 쿠바 전통 성년식 킨세녜라를 해주고 싶은 엄마의 뜻을 페미니스트 딸에게 전하는 일이 쉽지는 않다.
+                    </p>
+                    <p class="card-text tags">넷플릭스 / 미완 / 유쾌발랄 / 가족 / 감동</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                     src="https://lh3.googleusercontent.com/proxy/nbfoRLswNuuEFe61fM436kKPVoDh5MP8MAM-iOLtSc5rEzRfa-GP9ew9R5BiivK7SSm8gdCg7y8u_XbcWGClig"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <a href="" target="_blank">
+                        <h5 class="card-title">다음 작품은?</h5>
+                    </a>
+                    <p class="card-text">
+                        봐야지 생각만 하고 아직 안 본 작품들이 당신을 기다리고 있습니다!
+                    </p>
+                    <p class="card-text tags">감상태그</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
