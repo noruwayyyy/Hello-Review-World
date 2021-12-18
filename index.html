@@ -5,8 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta property="og:description"        content="드라마, 영화 등 다양한 영상 컨텐츠에 대한 리뷰를 기록하고, 나중에 볼 수 있는 공간입니다" />
-	<meta property="og:image"              content="https://images.unsplash.com/photo-1585909695284-32d2985ac9c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+    	<meta property="og:description"        content="드라마, 영화 등 다양한 영상 컨텐츠에 대한 리뷰를 기록하고, 나중에 볼 수 있는 공간입니다" />
+	<meta property="og:image"              content="https://images.unsplash.com/photo-1585909695284-32d2985ac9c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -38,7 +38,7 @@
             margin: auto;
         }
         .jumbotron{
-            height: 750px;
+            height: 400px;
             background-image: url("https://images.unsplash.com/photo-1585909695284-32d2985ac9c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
             background-blend-mode: overlay;
             background-size: cover;
@@ -64,10 +64,11 @@
         .form-all{
             width: 600px;
             margin: 65px auto 60px auto;
-            border: 3px solid crimson;
+            border: 3px solid firebrick;
             border-radius: 30px;
             background-color: white;
             padding: 30px;
+            display: none;
         }
         .form-group{
             font-weight: bold;
@@ -77,14 +78,40 @@
             width: 150px;
             display: block;
             margin: 30px auto auto auto;
+            background-color: firebrick;
+        }
+        #btn-review{
+            background-color: firebrick;;
+            margin-left: 690px;
         }
         #comments{
             color: black;
         }
     </style>
     <script>
+        let count = 1;
         function hey() {
+            //if (count % 2 ==0) {
+            //    alert('짝수번 눌렀네요!')
+            //} else {
+            //    alert('홀수번 눌렀네요!')
+            //}
+            //count += 1;
             alert('지금은 리뷰할 수 없어요(>m<);;');
+        }
+    </script>
+    <script>
+        function openclose() {
+            let status = $('#review-box').css('display');
+            if (status == 'block') {
+                $('#review-box').hide();
+                $('#btn-review').text('리뷰박스 열기');
+                $('#jumbotron-bg').css('height', '400px');
+            } else {
+                $('#review-box').show();
+                $('#btn-review').text('리뷰박스 닫기');
+                $('#jumbotron-bg.jumbotron').css('height', '800px');
+            }
         }
     </script>
     <script
@@ -95,24 +122,28 @@
 
 <body>
     <div class="wrap">
-        <div class="jumbotron">
+        <div class="jumbotron" id="jumbotron-bg">
             <h1 class="display-4">Hello, Review World!</h1>
             <p class="lead">드라마, 영화 등 다양한 영상 컨텐츠에 대한 리뷰를 기록하고, 나중에 볼 수 있는 공간입니다</p>
             <hr class="my-4">
-            <div class="form-all">
+            <p class="lead">
+                <a onclick="openclose()" class="btn btn-danger btn-lg" id="btn-review" href="#" role="button">리뷰박스
+                    열기</a>
+            </p>
+            <div class="form-all" id="review-box">
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">작품url</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                    <label>작품url</label>
+                    <input type="text" class="form-control"
                            placeholder="작품을 감상할 수 있는 url을 입력해주세요">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">작품 줄거리</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="작품의 간단한 줄거리를 입력해주세요"
+                    <label>작품 줄거리</label>
+                    <textarea class="form-control" placeholder="작품의 간단한 줄거리를 입력해주세요"
                               rows="3"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">감상태그</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                    <label>감상태그</label>
+                    <input type="text" class="form-control"
                            placeholder="ex)넷플릭스 / 완결 / 여운">
                 </div>
                 <button onclick="hey()" type="submit" class="btn btn-danger btn-done">리뷰 작성하기</button>
@@ -193,7 +224,7 @@
             <div class="card" id="comments">
                 <div class="card-body">
                     <a href="" target="_blank">
-                        <h5 class="card-title" id="comments">그냥 넣어본 댓글기능</h5>
+                        <h5 class="card-title" id="comments-title">그냥 넣어본 댓글기능</h5>
                     </a>
                     <!-- 댓글 설치 코드 -->
                     <div id="disqus_thread"></div>
