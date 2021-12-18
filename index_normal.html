@@ -54,16 +54,29 @@
             border: 3px solid dimgrey;
             border-radius: 30px;
             padding: 30px;
+            display: none;
         }
         .btn-done{
             width: 100px;
             display: block;
             margin: 30px auto auto auto;
         }
+        }
     </style>
     <script>
         function hey() {
             alert('지금은 리뷰할 수 없어요!');
+        }
+        function openclose(){
+            let status = $('#post-box').css('display');
+            if (status == 'block') {
+                $('#post-box').hide();
+                $('#btn-review').text('리뷰박스 열기');
+            } else {
+                $('#post-box').show();
+                $('#btn-review').text('리뷰박스 닫기');
+            }
+
         }
     </script>
 
@@ -76,27 +89,27 @@
             <p class="lead">드라마, 영화 등 다양한 영상 컨텐츠에 대한 리뷰를 기록하고, 나중에 볼 수 있는 공간입니다</p>
             <hr class="my-4">
             <p class="lead">
-                <a onclick="hey()" class="btn btn-primary btn-lg" href="#" role="button">Review with me</a>
+                <a onclick="openclose()" class="btn btn-primary btn-lg" id="btn-review" href="#" role="button">리뷰박스 열기</a>
             </p>
         </div>
 
-        <div class="form-all">
+        <div class="form-all" id="post-box">
             <div class="form-group">
-                <label for="exampleFormControlInput1">작품url</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="작품을 감상할 수 있는 url을 입력해주세요">
+                <label for="video-url">작품url</label>
+                <input type="text" class="form-control" id="video-url" placeholder="작품을 감상할 수 있는 url을 입력해주세요">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">작품 줄거리</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="작품의 간단한 줄거리를 입력해주세요" rows="3"></textarea>
+                <label for="video-syn">작품 줄거리</label>
+                <textarea class="form-control" id="video-syn" placeholder="작품의 간단한 줄거리를 입력해주세요" rows="3"></textarea>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">감상태그</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="ex)넷플릭스 / 완결 / 여운">
+                <label for="video-tags">감상태그</label>
+                <input type="text" class="form-control" id="video-tags" placeholder="ex)넷플릭스 / 완결 / 여운">
             </div>
-            <button onclick="hey()" type="submit" class="btn btn-primary btn-done">작성완료</button>
+            <button onclick="hey()" type="submit" class="btn btn-primary btn-done" id="post-box-btn">작성완료</button>
         </div>
 
-        <div class="card-columns">
+        <div class="card-columns" id="card-box">
             <div class="card">
                 <img class="card-img-top"
                      src="https://d3mcojo3jv0dbr.cloudfront.net/2020/11/09/13/58/9378beb549f3a5a3aa4c27c762171b76.jpeg?w=600&h=300&q=65"
